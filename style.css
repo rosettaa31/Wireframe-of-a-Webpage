@@ -1,46 +1,78 @@
+/*
+Color Palette 
+1. Pastel Pink: #F8D7DA
+2. Pastel Yellow: #fff0C2
+3. Dark Brown: #594545
+4. Rose Pink: #D982A5
+5. Baby Green: #D9EAD3
+
+Fonts 
+1. Georgie
+2. Arial
+
+
+*/
+
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
 }
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background: color #fff OF 5px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    scroll-behavior: smooth;
+    background-image: url(https://images.plurk.com/mx_2PpMqSptIXUMBAETIWtPaT.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    
 }
 
 /*main card*/
 .card{
-    max-width: 350px;
+    max-width: 380px;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: #fff0C2;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 80px 25px rgba(89,69,69, 0.15);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px #fff0C2;
 }
 
 /*cover background*/
 .cover{
-    height: 140px;
-    background-image: url();
+    height: 150px;
+    background-image: url(https://imgs.plurk.com/QHV/scN/4srfOUniD7EaWLinyRZ0PRLdXFC_tn.jpg);
     background-position: center;
     background-size:cover;
+
 
 }
 
 /*Profile Picture*/
 .profile-picture{
-    height: 125px;
-    width: 125px;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #FFFFFF;
-    margin-top: -65px;
+    border: 5px solid #F8D7DA;
+    margin: -60px auto 0;
     position: relative;
+    display: block;
+
+
 
 }
 
@@ -53,14 +85,54 @@ h2 {
     font-size: 28px;
     color:#594545;
     margin-bottom: 5px;
+    text-align: center;
 
 }
 .subtitle{
-    color: #D982A5;
+    color:  #D982A5;
     font-size: 13px;
     font-weight: bold;
     margin-bottom: 18px;
+    text-align: center;
 
 }
+.description {
+    font-size: 14px;
+    color: #594545;
+    line-height: 1.7;
+    margin-bottom: 22px;
+    text-align: justify;
+    font-family: 'Quicksanda', ;
 
+}
+.details {
+    text-align: left;
+    list-style: none;
+    transition: 0.1s;
+    font-family: Arial, serif;
 
+}
+.details li {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color: #D9EAD3;
+    padding: 15PX 17px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+
+}
+.details span {
+    color: #594545;
+    font-weight: bold;
+}
+.details strong {
+    color: #594545;
+}
+.card:hover .profile-picture {
+    transform:scale(1.08);
+}
+.details li:hover {
+    transform: translateX(5px);
+}
